@@ -4,50 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
+    
     <title>Survey | Sneaker Sphere</title>
 </head>
 
 <body>
-    <h1 id="title">Sneaker Sphere Customer Service Feedback</h1>
-    <p id="description">Thank you for being a valued customer of Sneaker Sphere! We strive to provide the best shopping experience and top-notch customer service. Your feedback is essential in helping us improve. This short survey will take just a few minutes of your time and will focus on your experience with our customer service team, overall satisfaction, and any suggestions you may have.</p>
+    <h1 id="title">Customer Service Feedback</h1>
+    <p id="description">Thank you for being a valued customer of Sneaker Sphere! We strive to provide the best shopping
+        experience and top-notch customer service. Your feedback is essential in helping us improve. This short survey
+        will take just a few minutes of your time and will focus on your experience with our customer service team,
+        overall satisfaction, and any suggestions you may have.</p>
+    <form action="" id="survey-form">
+        <fieldset>
+            <legend>Personal Information</legend>
 
-    <fieldset>
-        <legend>Personal Information</legend>
-        <form action="" id="survey-form">
-            <label id="name-label" >Full Name: <input id="name" type="text" required></label>
+            <label id="name-label">Full Name: <input id="name" type="text" placeholder="ex: Josh Smith" required></label>
 
-            <label id="email-label" >Email: <input id="email" type="email" required></label>
+            <label id="email-label">Email: <input id="email" type="email" placeholder="ex: joshsmith@gmail.com" required></label>
 
-            <label id="age-label" >Age: <input min="13" max="120" id="age" type="number" required></label>
+            <label id="number-label">Age: <input id="number" type="number" min="13" max="120" placeholder="ex: 21" required ></label>
 
-        </form>
-    </fieldset>
-    <fieldset>
-        <legend>How did you hear about Sneaker Sphere?</legend>
-        <label for=""> <input type="radio" name="referrer-type"> Social Media</label>
-        <label for=""> <input type="radio" name="referrer-type"> Word of Mouth</label>
-        <label for=""> <input type="radio" name="referrer-type"> Advertisement</label>
-        <label for=""> <input type="radio" name="referrer-type"> Other</label>
-    </fieldset>
-    <fieldset>
-        <legend>How satisfied are you with your recent interaction with our customer service team?</legend>
-        <label for=""> <input type="radio" name="rating-type" > Very Satisfied</label>
-        <label for=""> <input type="radio" name="rating-type"> Satisfied</label>
-        <label for=""> <input type="radio" name="rating-type"> Normal</label>
-        <label for=""> <input type="radio" name="rating-type"> Dissatisfied</label>
-        <label for=""> <input type="radio" name="rating-type"> Very Dissatisfied</label>
-    </fieldset>
-    <fieldset>
-        <legend>What improvements can we make to enhance your experience?</legend>
-        <label for=""><textarea name="improvements" id="improvements" rows="3" cols="30"></textarea></label>
-    </fieldset>
-    <fieldset>
-        <legend>Would you recommend Sneaker Sphere to others?</legend>
-        <label for=""> <input type="radio" name="recommend" > Yes</label>
-        <label for=""> <input type="radio" name="recommend" > No</label>
-    </fieldset>
-    <input type="submit" id="submit">
+
+        </fieldset>
+        <fieldset>
+            <legend>How did you hear about Sneaker Sphere?</legend>
+            <label for="referrer">
+                <select name="referrer" id="dropdown">
+                    <option value="">Select One</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="word-of-mouth">Word of Mouth</option>
+                    <option value="Advertisement">Advertisement</option>
+                    <option value="others">Others</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>How satisfied are you with your recent interaction with our customer service team?</legend>
+            <label for=""> <input type="radio" value="radio" name="rating-type"> Very Satisfied</label>
+            <label for=""> <input type="radio" value="radio" name="rating-type"> Satisfied</label>
+            <label for=""> <input type="radio" value="radio" name="rating-type"> Normal</label>
+            <label for=""> <input type="radio" value="radio" name="rating-type"> Dissatisfied</label>
+            <label for=""> <input type="radio" value="radio" name="rating-type"> Very Dissatisfied</label>
+        </fieldset>
+        <fieldset>
+            <legend>What improvements can we make to enhance your experience?</legend>
+            <label for=""><textarea name="improvements" id="improvements" rows="3" cols="30"></textarea></label>
+        </fieldset>
+        <fieldset>
+            <legend>Would you recommend Sneaker Sphere to others?</legend>
+            <label for=""> <input value="Yes" type="checkbox" name="recommend-yes"> Yes</label>
+            <label for=""> <input value="No" type="checkbox" name="recommend-no"> No</label>
+        </fieldset>
+
+        <input type="submit" id="submit">
+    </form>
 </body>
 
 </html>
